@@ -19,7 +19,7 @@ The system is built with **Python**, the **Gmail API**, and a **local Ollama LLM
 
 ---
 
-## High-Level Architecture
+## Architecture
 
 ```
 Gmail Inbox (LENAH ID)

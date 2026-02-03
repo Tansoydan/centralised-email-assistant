@@ -85,17 +85,17 @@ central-email-assistant/
 
 ##  Configuration
 
-Gmail / app behaviour:
+### Gmail / app behaviour:
 SCOPES = ["https://www.googleapis.com/auth/gmail.modify"]
 GMAIL_QUERY = "label:LENAH is:unread"
 MAX_RESULTS = 10
 DRY_RUN = True
 
-Ollama models:
+### Ollama models:
 OLLAMA_CLASSIFY_MODEL = "phi3:mini"
 OLLAMA_DRAFT_MODEL = "phi3:mini"
 
-Ollama runtime parameters:
+### Ollama runtime parameters:
 Classification is fully deterministic for reliable triage
 OLLAMA_CLASSIFY_OPTIONS = {
     "temperature": 0.0,

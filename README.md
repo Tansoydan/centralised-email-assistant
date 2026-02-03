@@ -7,7 +7,7 @@ The system is built with **Python**, the **Gmail API**, and a **local Ollama LLM
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 - Connect to a **centralised LENAH Gmail inbox**
 - Process only emails with a specific **Gmail label**
@@ -19,7 +19,7 @@ The system is built with **Python**, the **Gmail API**, and a **local Ollama LLM
 
 ---
 
-## 🧠 High-Level Architecture
+## High-Level Architecture
 
 ```
 Gmail Inbox (LENAH ID)
@@ -40,7 +40,7 @@ Gmail Inbox (LENAH ID)
 
 ---
 
-## 🛡️ Safety & Guardrails
+## Safety & Guardrails
 
 - **Label-based access**: only emails explicitly labelled `LENAH` are processed
 - **Pre-filtering** blocks:
@@ -54,7 +54,7 @@ Gmail Inbox (LENAH ID)
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Python 3.9+**
 - **Gmail API** (read + draft permissions only)
@@ -64,7 +64,7 @@ Gmail Inbox (LENAH ID)
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 central-email-assistant/
@@ -83,7 +83,7 @@ central-email-assistant/
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 All runtime configuration is managed in `src/config.py`.
 
@@ -103,7 +103,7 @@ DRY_RUN = True
 
 ---
 
-## ▶️ How It Works
+##  How It Works
 
 1. Authenticate with Gmail using OAuth
 2. Fetch emails matching the `LENAH` label
@@ -115,7 +115,7 @@ DRY_RUN = True
 
 ---
 
-## 🧪 Running the Project
+## Running the Project
 
 Activate your virtual environment:
 
@@ -137,7 +137,7 @@ You should see console output showing:
 
 ---
 
-## 📝 Audit Logging
+##  Audit Logging
 
 Each run produces a timestamped audit log in the `runs/` directory, including:
 - message ID
@@ -150,7 +150,7 @@ This ensures the system is **transparent and reviewable**.
 
 ---
 
-## 📌 Summary
+## Summary
 
 This project demonstrates a **safe, auditable, and scalable** approach to using LLMs for email automation.  
 By combining Gmail labels, rule-based pre-filtering, and a local LLM, LENAH provides a strong foundation for real-world deployment in property and customer enquiry workflows.

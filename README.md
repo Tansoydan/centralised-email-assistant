@@ -85,21 +85,31 @@ central-email-assistant/
 
 ##  Configuration
 
-All runtime configuration is managed in `src/config.py`.
-
-Example:
-
-```python
+# Gmail / app behaviour
 SCOPES = ["https://www.googleapis.com/auth/gmail.modify"]
-
 GMAIL_QUERY = "label:LENAH is:unread"
 MAX_RESULTS = 10
+DRY_RUN = True
 
+# Ollama models
 OLLAMA_CLASSIFY_MODEL = "phi3:mini"
 OLLAMA_DRAFT_MODEL = "phi3:mini"
 
-DRY_RUN = True
-```
+# Ollama runtime parameters
+# Classification is fully deterministic for reliable triage
+OLLAMA_CLASSIFY_OPTIONS = {
+    "temperature": 0.0,
+    "num_ctx": 4096,
+    "num_predict": 120,
+}
+
+# Drafting allows limited creativity while remaining controlled
+OLLAMA_DRAFT_OPTIONS = {
+    "temperature": 0.2,
+    "num_ctx": 8192,
+    "num_predict": 350,
+}
+
 
 ---
 
